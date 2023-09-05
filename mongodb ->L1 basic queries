@@ -71,4 +71,68 @@ use name_of_database;
 // same command is used for creation of database
 
 
+To print the collections we use :
+show collections;
+
+To print all the documents of a collection:
+db.colection_name.find();
+
+
+To create a database:
+use db_name;
+The use command creates a new database if there is no already present db with the
+same name, otherwise if there is a db with the same name, it just selects it.
+Now what will happen is, after creating a DB, if we try to do show dbs; then it will not list
+our newly created database. Because, if mondodb sees that there is no valid collection
+added in the database, and the db is empty, it doesn’t list it.
+
+So how to add a new collection ?
+
+
+How to add a new collections ?
+To create a new collection we can do:
+db.createCollection("name_of_the_collection")
+
+Make sure we execute this command after use some_db_name
+
+In normal RDBMS, while create a table, we have to define what will be the column of
+the table. Why we are not defining properties of a collection on mongodb ?
+This is because, mongodb doesn’t restrict us by any means for defining documents of a
+collection. Two documents of the same collection can posses different type of
+properties.
+
+How to add a new record to a collection ?
+To add a new record we can do:
+db.collectionName.insertOne({key1: value1, key2: value2 ....})
+
+or
+
+use sample_mflix
+
+db.movies.insertMany([
+   {
+      title: "Jurassic World: Fallen Kingdom",
+      genres: [ "Action", "Sci-Fi" ],
+      runtime: 130,
+      rated: "PG-13",
+      year: 2018,
+      directors: [ "J. A. Bayona" ],
+      cast: [ "Chris Pratt", "Bryce Dallas Howard", "Rafe Spall" ],
+      type: "movie"
+    },
+    {
+      title: "Tag",
+      genres: [ "Comedy", "Action" ],
+      runtime: 105,
+      rated: "R",
+      year: 2018,
+      directors: [ "Jeff Tomsic" ],
+      cast: [ "Annabelle Wallis", "Jeremy Renner", "Jon Hamm" ],
+      type: "movie"
+    }
+])
+
+
+
+
 
