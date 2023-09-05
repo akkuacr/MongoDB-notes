@@ -1,0 +1,74 @@
+RDBMS → Relational database management system → data is stored in the form of
+tables.
+Examples of RDBMS → MySQL, MariaDB, PgSQL etc.
+SQL → Structured Query Language
+
+// 
+NoSQL
+NoSQL stands for Not only SQL.
+NoSQL is a category of databases, which stores data in non-relational fashion i.e.
+NoSQL generally doesn’t store data in tables. The name NoSQL is given because in
+most of the NoSQL databases, we don’t write SQL like queries for inserting, deleting,
+updating, and fetching data.
+Examples of NoSQL: MongoDB, CouchBase, Cassandra, ReThinkDB etc.
+
+
+Types of NoSQL databases:
+Graph Databases → Neo4j
+Key - Value Databases → Redis
+Document Database → MongoDb
+There are more as well
+
+
+JSON
+JSON stands for Javascript object notation.
+It is no where actually related to JS. That means if you make a JSON file, JS cant do
+much with it.
+
+
+MongoDB
+Links: https://www.mongodb.com/json-and-bson
+MongoDB is a document based database, which internally stores data in the form of
+BSON, but we as normal developers can send or receive data in form of JSON,
+internally mongodb manages the conversion of JSON-BSON and BSON-JSON
+automatically. 
+
+Now when we used to store data in any RDBMS say MySQL, data was stored in tables.
+Tables used to represent real life entity. Inside a table, we had many rows. Rows used
+to represent one data record. Columns inside table used to represent properties of the
+entity.
+Now in mongodb, we store data in form of documents (JSON like).
+So here, a real life entity is represented by Collections. What table is for RDBMS is
+collections for mongodb. In simple terms, collections are group of JSON documents.
+One record in a collection is called as Document. What row is for RDBMS is document
+for mongodb.
+A document is nothing but a JSON (internally BSON), a JSON has multiple key-value
+pairs. The key of JSON represent the property of the entity. So what column is for
+RDBMS, key (from key-value pair) is for mongodb .
+
+Installing MongoDB:
+Link: https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-onwindows-4ee4b3493514
+
+
+Using MongoDB
+Open MongoDB in terminal:
+Write (mongo) in your terminal, and it will open the mongodb console
+
+
+Commands in mongodb
+List all databases in mongodb
+
+To list all the databases stored in your mongodb we can use the below commands:
+show databases;
+
+We can also use the below command:
+show dbs;
+
+
+How to select a particular DB to work on?
+To select a particular db and start querying on it we can use
+use name_of_database;
+// same command is used for creation of database
+
+
+
