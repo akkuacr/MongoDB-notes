@@ -4,5 +4,27 @@ answer is yes
  db.Students.insertOne({name:"Avinash",subjects:["Web","Java"]});
 
 how to import sample db in MONGODB?
+ye sb pdf m h 
+
+How to show how many documents are present in a collection
+db.weather_data.find().count();
+//means count function hota h mongodb m
+
+if u have huge amount of data aur aap find operation lagate h toh woh saare print ni krega aapko last m it type krna pdega for more
+
+how to get a certain number of documents?
+//means ki limit kese lgani h
+new_weather_db>db.weather_data.find().limit(3)
+
+
+
+How to set an offset while querying data?
+We can set an offset using the skip function. Using the skip function we can
+skip some records and then start fetching records post the skip.
+mongoshmongodb:|/127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000(I?directConnection=true\&se)961
+~ db.collectionName.find().skip(5).limit(3)
+
+
+
 
 
