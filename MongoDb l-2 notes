@@ -1,2 +1,8 @@
 MONGODB 
-how to add multiple recors together?
+can we enter array in mongodb?
+answer is yes
+ db.Students.insertOne({name:"Avinash",subjects:["Web","Java"]});
+
+how to import sample db in MONGODB?
+
+
