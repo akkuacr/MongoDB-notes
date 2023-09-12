@@ -33,6 +33,63 @@ should be equal to any one of them then u can use '$in'
 ab in operator:-db.weather_data.find({callLetters: { $in :['3EHH','3EIZ','3EJF']}}).count(); 
 
 
+Analysing queries
+We can analyse our queries using the 'explain' function .Inside this function we can pass an argument 'executionStats' and it will provide us the details
+db.weather_data.find().explain("executionStats");
+ db.weather_data.find().explain("executionStats");
+output:-
+{
+        "queryPlanner" : {
+                "plannerVersion" : 1,
+                "namespace" : "weather.weather_data",
+                "indexFilterSet" : false,
+                "parsedQuery" : {
+
+                },
+                "winningPlan" : {
+                        "stage" : "COLLSCAN",
+                        "direction" : "forward"
+                },
+                "rejectedPlans" : [ ]
+        },
+        "executionStats" : {
+                "executionSuccess" : true,
+                "nReturned" : 10000,
+                "executionTimeMillis" : 9,
+                "totalKeysExamined" : 0,
+                "totalDocsExamined" : 10000,
+                "executionStages" : {
+                        "stage" : "COLLSCAN",
+                        "nReturned" : 10000,
+                        "executionTimeMillisEstimate" : 0,
+                        "works" : 10002,
+                        "advanced" : 10000,
+                        "needTime" : 1,
+                        "needYield" : 0,
+                        "saveState" : 78,
+                        "restoreState" : 78,
+                        "isEOF" : 1,
+                        "invalidates" : 0,
+                        "direction" : "forward",
+                        "docsExamined" : 10000
+                }
+        },
+        "serverInfo" : {
+                "host" : "737c3e81c091",
+                "port" : 27017,
+                "version" : "3.6.8",
+                "gitVersion" : "8e540c0b6db93ce994cc548f000900bdc740f80a"
+        },
+        "ok" : 1
+}
+
+isse hume pta chla ki total search m O(n) time lga..
+ab isse optimized krne k liye hum use krenge indexing
+
+Indexing is a mechanism using which database prepared more data structures to store data in  a particular order based on a particular keys, for faster
+search, data structures like b,b+ tree and trie data structure
+
+
 
 
 
