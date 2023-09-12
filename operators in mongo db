@@ -88,6 +88,25 @@ ab isse optimized krne k liye hum use krenge indexing
 
 Indexing is a mechanism using which database prepared more data structures to store data in  a particular order based on a particular keys, for faster
 search, data structures like b,b+ tree and trie data structure
+ to get all indices of the documents use this query
+-> db.weather_data.getIndexes()
+To remove index from a collection
+->db.weather_data.dropIndex('Index_NAME');
+
+To make an index
+db.weather_data.createIndex({elevation:1});
+
+Analysing the indexes
+Before the indexes 6 documents ko nikalnee k liye 10000 documents pdne pd re the but after that u can only need to read 6 documents
+you can check the docsExamined property
+upar wala jo tha woh integers pe tha ...
+ab string k liye
+->db.weather_data.createIndex({'callLetters':'text' });
+
+ 
+
+query is:db.weather_data.createIndex({elevation:1})
+
 
 
 
