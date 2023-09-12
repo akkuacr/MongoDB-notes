@@ -1,0 +1,28 @@
+how to get distinct values of a particular key??
+we can use 'distinct ' function in order
+db.collectionName.distinct("key");
+
+ab bari ati operators ki such as greather than ,snaller than equal to or many more
+
+mongodb provides different comparison ,logical, bitwise etc operators that we can use very easily
+general syntax hoga :- db.collectionName.find({property:{$operator:value}});
+sbse pehle not equal to:-db.weather_data.find({type:{$ne :'FM-13'}}).count();
+
+Commonly use operator:
+$ne->not equals
+$eq->equals
+$lt->less than
+$lte-> less than or equal to
+$gt->greater than
+$gte->greater than or equal to
+$and->logical and
+$or ->logical or
+$not logical not
+$nor->logical nor
+$in->for checking in the array
+$nin->not in the array
+aur in sbko general syntax ke sath likh do 
+
+
+
+
