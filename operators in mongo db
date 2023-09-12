@@ -23,6 +23,17 @@ $in->for checking in the array
 $nin->not in the array
 aur in sbko general syntax ke sath likh do 
 
+for example:db.weather_data.find({   "dewPoint.value": { $gt: 10 } }).count();
+
+to use and operation syntax is little tricky:db.weather_data.find({$and:[{elevation:{$lt:8000}},{elevation:{$gt:1000}}]}).count();
+
+
+If you want to find all the records based on a property and compare that with a bunch of values in a array such that the property
+should be equal to any one of them then u can use '$in'
+ab in operator:-db.weather_data.find({callLetters: { $in :['3EHH','3EIZ','3EJF']}}).count();
+
+
+
 
 
 
