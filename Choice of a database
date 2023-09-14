@@ -9,7 +9,18 @@ js object-like syntax in mongoDB, KQL in elastic search etc
 
 2.Bulk Processing support:- This refers to how easy it is to import / export data or do processing on multiple records together.
 
+
+**************************************************************************************************
+Technical Criteria
+
+
+
+
 Transaction Support:- Database ki terms set of tasks to acheive something is called transaction . RDBMS supports good transaction
+
+
+ 
+
 
 
 ACID support:-
@@ -17,7 +28,9 @@ A-Atomicity -> either the transaction will complete all the steps or ,if somethi
 ab real question ye h ki sql transaction acheive kese krta h. (mysql achieve this using undo logs),means isme logs maintain rkhta h aur agr kisi v step ko rollback krna pda toh undo logs se ho jaega
 
 C-Consistency->before and after transaction data should be consistent
-   see reference for gfg
+   see reference for gfg 
+   for this database use double write buffer
+   
 
 I-ISolation -> agr do transaction hori h toh dono independent honi chaiye ,and one shouldn't affect each other
 MySql achieves Isolation using locks such as row level locks,or column level locks
@@ -30,4 +43,12 @@ so for isolation we use locks and isolation level
 
 D-> Durability->jb data write krre ho tb kuch crash ho gya ,toh jo data tum expect krre ho ki write hona chaiye ,iske liye we use
 (REDO locks)
+
+
+No Sql doesn't support transaction to strictly
+In NOSQL ACID means
+Associative
+commutative
+Indempotent
+Distributed
 
