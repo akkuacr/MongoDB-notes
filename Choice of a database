@@ -3,4 +3,25 @@ Nosql m ques nahi phuchte jyada jyada ques mysql m bnte
 In order to consider a database for a product we have to consider a database on technical and non-technical criteria
 
 Non - technical criteria
-1.Querying Interface:- Every database provide different m  
+
+1.Querying Interface:- Every database provide different ways to query the data, for example,SQL in mysql or Pgsql, more
+js object-like syntax in mongoDB, KQL in elastic search etc
+
+2.Bulk Processing support:- This refers to how easy it is to import / export data or do processing on multiple records together.
+
+Transaction Support:- Database ki terms set of tasks to acheive something is called transaction . RDBMS supports good transaction
+
+
+ACID support:-
+A-Atomicity -> either the transaction will complete all the steps or ,if something goes sideways then  none of them will be applied
+ab real question ye h ki sql transaction acheive kese krta h. (mysql achieve this using undo logs),means isme logs maintain rkhta h aur agr kisi v step ko rollback krna pda toh undo logs se ho jaega
+
+C-Consistency->
+
+
+I-ISolation -> agr do transaction hori h toh dono independent honi chaiye ,and one shouldn't affect each other
+MySql achieves Isolation using locks such as row level locks,or column level locks
+
+D-Durability
+
+4
